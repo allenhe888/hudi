@@ -46,13 +46,13 @@
     <module>packaging/hudi-hadoop-mr-bundle</module>
     <module>packaging/hudi-hive-sync-bundle</module>
     <module>packaging/hudi-spark-bundle</module>
-    <module>packaging/hudi-presto-bundle</module>
+    <!--<module>packaging/hudi-presto-bundle</module>-->
     <module>packaging/hudi-utilities-bundle</module>
     <module>packaging/hudi-timeline-server-bundle</module>
-    <module>docker/hoodie/hadoop</module>
+    <!--<module>docker/hoodie/hadoop</module>-->
     <module>hudi-integ-test</module>
-    <module>packaging/hudi-integ-test-bundle</module>
-    <module>hudi-examples</module>
+    <!--<module>packaging/hudi-integ-test-bundle</module>-->
+    <!--<module>hudi-examples</module>-->
     <module>hudi-flink</module>
     <module>packaging/hudi-flink-bundle</module>
   </modules>
@@ -204,40 +204,40 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>3.0.0</version>
-        <dependencies>
-          <dependency>
-            <groupId>com.puppycrawl.tools</groupId>
-            <artifactId>checkstyle</artifactId>
-            <version>8.18</version>
-          </dependency>
-        </dependencies>
-        <configuration>
-          <consoleOutput>true</consoleOutput>
-          <encoding>UTF-8</encoding>
-          <configLocation>style/checkstyle.xml</configLocation>
-          <suppressionsLocation>style/checkstyle-suppressions.xml</suppressionsLocation>
-          <suppressionsFileExpression>checkstyle.suppressions.file</suppressionsFileExpression>
-          <failOnViolation>true</failOnViolation>
-          <violationSeverity>warning</violationSeverity>
-          <includeTestSourceDirectory>true</includeTestSourceDirectory>
-          <sourceDirectories>
-            <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
-          </sourceDirectories>
-          <excludes>**\/generated-sources\/</excludes>
-        </configuration>
-        <executions>
-          <execution>
-            <phase>compile</phase>
-            <goals>
-              <goal>check</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
+      <!--<plugin>-->
+        <!--<groupId>org.apache.maven.plugins</groupId>-->
+        <!--<artifactId>maven-checkstyle-plugin</artifactId>-->
+        <!--<version>3.0.0</version>-->
+        <!--<dependencies>-->
+          <!--<dependency>-->
+            <!--<groupId>com.puppycrawl.tools</groupId>-->
+            <!--<artifactId>checkstyle</artifactId>-->
+            <!--<version>8.18</version>-->
+          <!--</dependency>-->
+        <!--</dependencies>-->
+        <!--<configuration>-->
+          <!--<consoleOutput>true</consoleOutput>-->
+          <!--<encoding>UTF-8</encoding>-->
+          <!--<configLocation>style/checkstyle.xml</configLocation>-->
+          <!--<suppressionsLocation>style/checkstyle-suppressions.xml</suppressionsLocation>-->
+          <!--<suppressionsFileExpression>checkstyle.suppressions.file</suppressionsFileExpression>-->
+          <!--<failOnViolation>true</failOnViolation>-->
+          <!--<violationSeverity>warning</violationSeverity>-->
+          <!--<includeTestSourceDirectory>true</includeTestSourceDirectory>-->
+          <!--<sourceDirectories>-->
+            <!--<sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>-->
+          <!--</sourceDirectories>-->
+          <!--<excludes>**\/generated-sources\/</excludes>-->
+        <!--</configuration>-->
+        <!--<executions>-->
+          <!--<execution>-->
+            <!--<phase>compile</phase>-->
+            <!--<goals>-->
+              <!--<goal>check</goal>-->
+            <!--</goals>-->
+          <!--</execution>-->
+        <!--</executions>-->
+      <!--</plugin>-->
 <!--
       See https://jira.apache.org/jira/browse/HUDI-304
       <plugin>
