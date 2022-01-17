@@ -45,12 +45,12 @@
     <module>hudi-sync</module>
     <module>packaging/hudi-hadoop-mr-bundle</module>
     <module>packaging/hudi-hive-sync-bundle</module>
-    <module>packaging/hudi-spark-bundle</module>
+    <!--<module>packaging/hudi-spark-bundle</module>-->
     <!--<module>packaging/hudi-presto-bundle</module>-->
     <module>packaging/hudi-utilities-bundle</module>
     <module>packaging/hudi-timeline-server-bundle</module>
     <!--<module>docker/hoodie/hadoop</module>-->
-    <module>hudi-integ-test</module>
+    <!--<module>hudi-integ-test</module>-->
     <!--<module>packaging/hudi-integ-test-bundle</module>-->
     <!--<module>hudi-examples</module>-->
     <module>hudi-flink</module>
@@ -99,7 +99,7 @@
     <log4j.version>1.2.17</log4j.version>
     <slf4j.version>1.7.15</slf4j.version>
     <joda.version>2.9.9</joda.version>
-    <hadoop.version>2.7.3</hadoop.version>
+    <hadoop.version>2.7.2</hadoop.version>
     <hive.groupid>org.apache.hive</hive.groupid>
     <hive.version>2.3.1</hive.version>
     <hive.exec.classifier>core</hive.exec.classifier>
@@ -111,7 +111,7 @@
     <spark.version>${spark2.version}</spark.version>
     <sparkbundle.version>${spark2bundle.version}</sparkbundle.version>
     <flink.version>1.12.2</flink.version>
-    <spark2.version>2.4.4</spark2.version>
+    <spark2.version>2.4.3</spark2.version>
     <spark3.version>3.0.0</spark3.version>
     <spark2bundle.version></spark2bundle.version>
     <spark3bundle.version>3</spark3bundle.version>
@@ -128,7 +128,7 @@
     <thrift.version>0.12.0</thrift.version>
     <jetty.version>9.4.15.v20190215</jetty.version>
     <htrace.version>3.1.0-incubating</htrace.version>
-    <hbase.version>1.2.3</hbase.version>
+    <hbase.version>1.2.2</hbase.version>
     <codehaus-jackson.version>1.9.13</codehaus-jackson.version>
     <h2.version>1.4.199</h2.version>
     <awaitility.version>3.1.2</awaitility.version>
