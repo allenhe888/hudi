@@ -102,6 +102,7 @@
     <hadoop.version>2.7.2</hadoop.version>
     <hive.groupid>org.apache.hive</hive.groupid>
     <hive.version>2.3.1</hive.version>
+    <!--<hive.version>1.2.1</hive.version>-->
     <hive.exec.classifier>core</hive.exec.classifier>
     <metrics.version>4.1.1</metrics.version>
     <orc.version>1.6.0</orc.version>

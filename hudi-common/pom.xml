@@ -213,6 +213,12 @@
       <artifactId>system-rules</artifactId>
       <version>1.17.2</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>junit-dep</artifactId>
+          <groupId>junit</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <!-- HBase -->
