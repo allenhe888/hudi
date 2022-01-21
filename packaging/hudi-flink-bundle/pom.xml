@@ -173,6 +173,10 @@
                   <shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.metastore.</shadedPattern>
                 </relocation>
                 <relocation>
+                  <pattern>org.apache.hadoop.hive.metastore.</pattern>
+                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.ql.metadata.</shadedPattern>
+                </relocation>
+                <relocation>
                   <pattern>org.apache.hive.common.</pattern>
                   <shadedPattern>${flink.bundle.shade.prefix}org.apache.hive.common.</shadedPattern>
                 </relocation>
