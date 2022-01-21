@@ -31,7 +31,8 @@
   <properties>
     <checkstyle.skip>true</checkstyle.skip>
     <main.basedir>${project.parent.basedir}</main.basedir>
-    <flink.bundle.hive.scope>compile</flink.bundle.hive.scope>
+    <!--<flink.bundle.hive.scope>compile</flink.bundle.hive.scope>-->
+    <flink.bundle.hive.scope>package</flink.bundle.hive.scope>
     <flink.bundle.shade.prefix>org.apache.hudi.</flink.bundle.shade.prefix>
     <javax.servlet.version>3.1.0</javax.servlet.version>
     <!-- override to be same with flink 1.12.2 -->
