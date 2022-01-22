@@ -149,87 +149,12 @@
                   <include>commons-codec:commons-codec</include>
                 </includes>
               </artifactSet>
-              <relocations>
-                <relocation>
-                  <pattern>javax.servlet.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}javax.servlet.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.avro.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.avro.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.parquet.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.parquet.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>com.yammer.metrics.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}com.yammer.metrics.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>com.beust.jcommander.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}com.beust.jcommander.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.hive.jdbc.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hive.jdbc.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.hadoop.hive.metastore.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.metastore.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.hive.common.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hive.common.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.hadoop.hive.common.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.common.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.hadoop.hive.conf.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.conf.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.hive.service.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hive.service.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.hadoop.hive.service.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.service.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.hadoop.hive.ql.metadata.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.ql.metadata.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.hadoop.hive.ql.optimizer.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.ql.optimizer.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>com.codahale.metrics.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}com.codahale.metrics.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.commons.codec.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.commons.codec.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.eclipse.jetty.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.jetty.</shadedPattern>
-                </relocation>
-                <!-- Shade kryo-shaded because it may conflict with kryo used by flink -->
-                <relocation>
-                  <pattern>com.esotericsoftware.kryo.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}com.esotericsoftware.kryo.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>com.fasterxml.jackson.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}com.fasterxml.jackson.</shadedPattern>
-                </relocation>
-              </relocations>
 
               <!--<relocations>-->
+                <!--<relocation>-->
+                  <!--<pattern>javax.servlet.</pattern>-->
+                  <!--<shadedPattern>${flink.bundle.shade.prefix}javax.servlet.</shadedPattern>-->
+                <!--</relocation>-->
                 <!--<relocation>-->
                   <!--<pattern>org.apache.avro.</pattern>-->
                   <!--<shadedPattern>${flink.bundle.shade.prefix}org.apache.avro.</shadedPattern>-->
@@ -255,10 +180,6 @@
                   <!--<shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.metastore.</shadedPattern>-->
                 <!--</relocation>-->
                 <!--<relocation>-->
-                  <!--<pattern>org.apache.hadoop.hive.metastore.</pattern>-->
-                  <!--<shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.ql.metadata.</shadedPattern>-->
-                <!--</relocation>-->
-                <!--<relocation>-->
                   <!--<pattern>org.apache.hive.common.</pattern>-->
                   <!--<shadedPattern>${flink.bundle.shade.prefix}org.apache.hive.common.</shadedPattern>-->
                 <!--</relocation>-->
@@ -279,6 +200,14 @@
                   <!--<shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.service.</shadedPattern>-->
                 <!--</relocation>-->
                 <!--<relocation>-->
+                  <!--<pattern>org.apache.hadoop.hive.ql.metadata.</pattern>-->
+                  <!--<shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.ql.metadata.</shadedPattern>-->
+                <!--</relocation>-->
+                <!--<relocation>-->
+                  <!--<pattern>org.apache.hadoop.hive.ql.optimizer.</pattern>-->
+                  <!--<shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.ql.optimizer.</shadedPattern>-->
+                <!--</relocation>-->
+                <!--<relocation>-->
                   <!--<pattern>com.codahale.metrics.</pattern>-->
                   <!--<shadedPattern>${flink.bundle.shade.prefix}com.codahale.metrics.</shadedPattern>-->
                 <!--</relocation>-->
@@ -290,7 +219,84 @@
                   <!--<pattern>org.eclipse.jetty.</pattern>-->
                   <!--<shadedPattern>${flink.bundle.shade.prefix}org.apache.jetty.</shadedPattern>-->
                 <!--</relocation>-->
+                <!--&lt;!&ndash; Shade kryo-shaded because it may conflict with kryo used by flink &ndash;&gt;-->
+                <!--<relocation>-->
+                  <!--<pattern>com.esotericsoftware.kryo.</pattern>-->
+                  <!--<shadedPattern>${flink.bundle.shade.prefix}com.esotericsoftware.kryo.</shadedPattern>-->
+                <!--</relocation>-->
+                <!--<relocation>-->
+                  <!--<pattern>com.fasterxml.jackson.</pattern>-->
+                  <!--<shadedPattern>${flink.bundle.shade.prefix}com.fasterxml.jackson.</shadedPattern>-->
+                <!--</relocation>-->
               <!--</relocations>-->
+
+              <relocations>
+                <relocation>
+                  <pattern>org.apache.avro.</pattern>
+                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.avro.</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache.parquet.</pattern>
+                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.parquet.</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>com.yammer.metrics.</pattern>
+                  <shadedPattern>${flink.bundle.shade.prefix}com.yammer.metrics.</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>com.beust.jcommander.</pattern>
+                  <shadedPattern>${flink.bundle.shade.prefix}com.beust.jcommander.</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache.hive.jdbc.</pattern>
+                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hive.jdbc.</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache.hadoop.hive.metastore.</pattern>
+                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.metastore.</shadedPattern>
+                </relocation>
+
+                <relocation>
+                  <pattern>org.apache.hadoop.hive.ql.metadata.</pattern>
+                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.ql.metadata.</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache.hadoop.hive.ql.optimizer.</pattern>
+                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.ql.optimizer.</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache.hive.common.</pattern>
+                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hive.common.</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache.hadoop.hive.common.</pattern>
+                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.common.</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache.hadoop.hive.conf.</pattern>
+                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.conf.</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache.hive.service.</pattern>
+                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hive.service.</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache.hadoop.hive.service.</pattern>
+                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.service.</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>com.codahale.metrics.</pattern>
+                  <shadedPattern>${flink.bundle.shade.prefix}com.codahale.metrics.</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.apache.commons.codec.</pattern>
+                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.commons.codec.</shadedPattern>
+                </relocation>
+                <relocation>
+                  <pattern>org.eclipse.jetty.</pattern>
+                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.jetty.</shadedPattern>
+                </relocation>
+              </relocations>
 
               <filters>
                 <filter>
@@ -679,6 +685,12 @@
       <version>${orc.version}</version>
       <classifier>nohive</classifier>
       <scope>${flink.bundle.hive.scope}</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>hive-storage-api</artifactId>
+          <groupId>org.apache.hive</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <!-- Fasterxml -->
