@@ -47,183 +47,209 @@
         <groupId>org.apache.rat</groupId>
         <artifactId>apache-rat-plugin</artifactId>
       </plugin>
+
+      <!--<plugin>-->
+        <!--<groupId>org.apache.maven.plugins</groupId>-->
+        <!--<artifactId>maven-shade-plugin</artifactId>-->
+        <!--<version>${maven-shade-plugin.version}</version>-->
+        <!--<executions>-->
+          <!--<execution>-->
+            <!--<phase>package</phase>-->
+            <!--<goals>-->
+              <!--<goal>shade</goal>-->
+            <!--</goals>-->
+            <!--<configuration>-->
+              <!--<createSourcesJar>${shadeSources}</createSourcesJar>-->
+              <!--<dependencyReducedPomLocation>${project.build.directory}/dependency-reduced-pom.xml-->
+              <!--</dependencyReducedPomLocation>-->
+              <!--<transformers>-->
+                <!--<transformer implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer">-->
+                <!--</transformer>-->
+                <!--<transformer implementation="org.apache.maven.plugins.shade.resource.ApacheNoticeResourceTransformer">-->
+                  <!--<addHeader>true</addHeader>-->
+                <!--</transformer>-->
+                <!--<transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">-->
+                  <!--<resource>META-INF/LICENSE</resource>-->
+                  <!--<file>target/classes/META-INF/LICENSE</file>-->
+                <!--</transformer>-->
+              <!--</transformers>-->
+              <!--<artifactSet>-->
+                <!--<includes>-->
+                  <!--<include>org.apache.hudi:hudi-common</include>-->
+                  <!--<include>org.apache.hudi:hudi-client-common</include>-->
+                  <!--<include>org.apache.hudi:hudi-flink-client</include>-->
+                  <!--<include>org.apache.hudi:hudi-flink_${scala.binary.version}</include>-->
+                  <!--<include>org.apache.hudi:hudi-hive-sync</include>-->
+                  <!--<include>org.apache.hudi:hudi-sync-common</include>-->
+                  <!--<include>org.apache.hudi:hudi-hadoop-mr</include>-->
+                  <!--<include>org.apache.hudi:hudi-timeline-service</include>-->
+
+                  <!--<include>com.yammer.metrics:metrics-core</include>-->
+                  <!--<include>com.beust:jcommander</include>-->
+                  <!--<include>io.javalin:javalin</include>-->
+                  <!--<include>org.jetbrains.kotlin:*</include>-->
+                  <!--<include>org.rocksdb:rocksdbjni</include>-->
+                  <!--<include>org.apache.httpcomponents:httpclient</include>-->
+                  <!--<include>org.apache.httpcomponents:httpcore</include>-->
+                  <!--<include>org.apache.httpcomponents:fluent-hc</include>-->
+                  <!--<include>org.antlr:stringtemplate</include>-->
+                  <!--&lt;!&ndash; Parquet &ndash;&gt;-->
+                  <!--<include>org.apache.parquet:parquet-avro</include>-->
+                  <!--<include>org.apache.parquet:parquet-hadoop</include>-->
+                  <!--<include>org.apache.parquet:parquet-column</include>-->
+                  <!--<include>org.apache.parquet:parquet-common</include>-->
+                  <!--<include>org.apache.parquet:parquet-format-structures</include>-->
+                  <!--<include>org.apache.parquet:parquet-encoding</include>-->
+                  <!--<include>org.apache.parquet:parquet-jackson</include>-->
+
+                  <!--<include>org.apache.avro:avro</include>-->
+                  <!--<include>joda-time:joda-time</include>-->
+                  <!--<include>com.fasterxml.jackson.core:jackson-annotations</include>-->
+                  <!--<include>com.fasterxml.jackson.core:jackson-databind</include>-->
+                  <!--<include>com.fasterxml.jackson.core:jackson-core</include>-->
+
+                  <!--<include>com.twitter:bijection-avro_${scala.binary.version}</include>-->
+                  <!--<include>com.twitter:bijection-core_${scala.binary.version}</include>-->
+                  <!--<include>io.dropwizard.metrics:metrics-core</include>-->
+                  <!--<include>io.dropwizard.metrics:metrics-graphite</include>-->
+                  <!--<include>io.prometheus:simpleclient</include>-->
+                  <!--<include>io.prometheus:simpleclient_httpserver</include>-->
+                  <!--<include>io.prometheus:simpleclient_dropwizard</include>-->
+                  <!--<include>io.prometheus:simpleclient_pushgateway</include>-->
+                  <!--<include>io.prometheus:simpleclient_common</include>-->
+                  <!--<include>com.yammer.metrics:metrics-core</include>-->
+
+                  <!--&lt;!&ndash; Used for HUDI TimelineService &ndash;&gt;-->
+                  <!--<include>org.eclipse.jetty:*</include>-->
+                  <!--<include>org.eclipse.jetty.websocket:*</include>-->
+                  <!--<include>javax.servlet:javax.servlet-api</include>-->
+
+                  <!--&lt;!&ndash; Used for HUDI write handle &ndash;&gt;-->
+                  <!--<inclide>com.esotericsoftware:kryo-shaded</inclide>-->
+
+                  <!--<include>org.apache.flink:flink-hadoop-compatibility_${scala.binary.version}</include>-->
+                  <!--<include>org.apache.flink:flink-avro</include>-->
+                  <!--<include>org.apache.flink:flink-json</include>-->
+                  <!--<include>org.apache.flink:flink-parquet_${scala.binary.version}</include>-->
+
+                  <!--<include>org.apache.hive:hive-common</include>-->
+                  <!--<include>org.apache.hive:hive-service</include>-->
+                  <!--<include>org.apache.hive:hive-service-rpc</include>-->
+                  <!--<include>org.apache.hive:hive-exec</include>-->
+                  <!--<include>org.apache.hive:hive-metastore</include>-->
+                  <!--<include>org.apache.hive:hive-jdbc</include>-->
+                  <!--<include>org.datanucleus:datanucleus-core</include>-->
+                  <!--<include>org.datanucleus:datanucleus-api-jdo</include>-->
+                  <!--<include>org.apache.thrift:libfb303</include>-->
+                  <!--<include>org.apache.orc:orc-core</include>-->
+                  <!--<include>org.apache.flink:flink-sql-connector-hive-2.3.6_${scala.binary.version}</include>-->
+
+                  <!--<include>org.apache.hbase:hbase-common</include>-->
+                  <!--<include>commons-codec:commons-codec</include>-->
+                <!--</includes>-->
+              <!--</artifactSet>-->
+              <!--<relocations>-->
+                <!--<relocation>-->
+                  <!--<pattern>org.apache.avro.</pattern>-->
+                  <!--<shadedPattern>${flink.bundle.shade.prefix}org.apache.avro.</shadedPattern>-->
+                <!--</relocation>-->
+                <!--<relocation>-->
+                  <!--<pattern>org.apache.parquet.</pattern>-->
+                  <!--<shadedPattern>${flink.bundle.shade.prefix}org.apache.parquet.</shadedPattern>-->
+                <!--</relocation>-->
+                <!--<relocation>-->
+                  <!--<pattern>com.yammer.metrics.</pattern>-->
+                  <!--<shadedPattern>${flink.bundle.shade.prefix}com.yammer.metrics.</shadedPattern>-->
+                <!--</relocation>-->
+                <!--<relocation>-->
+                  <!--<pattern>com.beust.jcommander.</pattern>-->
+                  <!--<shadedPattern>${flink.bundle.shade.prefix}com.beust.jcommander.</shadedPattern>-->
+                <!--</relocation>-->
+                <!--<relocation>-->
+                  <!--<pattern>org.apache.hive.jdbc.</pattern>-->
+                  <!--<shadedPattern>${flink.bundle.shade.prefix}org.apache.hive.jdbc.</shadedPattern>-->
+                <!--</relocation>-->
+                <!--<relocation>-->
+                  <!--<pattern>org.apache.hadoop.hive.metastore.</pattern>-->
+                  <!--<shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.metastore.</shadedPattern>-->
+                <!--</relocation>-->
+                <!--<relocation>-->
+                  <!--<pattern>org.apache.hadoop.hive.metastore.</pattern>-->
+                  <!--<shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.ql.metadata.</shadedPattern>-->
+                <!--</relocation>-->
+                <!--<relocation>-->
+                  <!--<pattern>org.apache.hive.common.</pattern>-->
+                  <!--<shadedPattern>${flink.bundle.shade.prefix}org.apache.hive.common.</shadedPattern>-->
+                <!--</relocation>-->
+                <!--<relocation>-->
+                  <!--<pattern>org.apache.hadoop.hive.common.</pattern>-->
+                  <!--<shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.common.</shadedPattern>-->
+                <!--</relocation>-->
+                <!--<relocation>-->
+                  <!--<pattern>org.apache.hadoop.hive.conf.</pattern>-->
+                  <!--<shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.conf.</shadedPattern>-->
+                <!--</relocation>-->
+                <!--<relocation>-->
+                  <!--<pattern>org.apache.hive.service.</pattern>-->
+                  <!--<shadedPattern>${flink.bundle.shade.prefix}org.apache.hive.service.</shadedPattern>-->
+                <!--</relocation>-->
+                <!--<relocation>-->
+                  <!--<pattern>org.apache.hadoop.hive.service.</pattern>-->
+                  <!--<shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.service.</shadedPattern>-->
+                <!--</relocation>-->
+                <!--<relocation>-->
+                  <!--<pattern>com.codahale.metrics.</pattern>-->
+                  <!--<shadedPattern>${flink.bundle.shade.prefix}com.codahale.metrics.</shadedPattern>-->
+                <!--</relocation>-->
+                <!--<relocation>-->
+                  <!--<pattern>org.apache.commons.codec.</pattern>-->
+                  <!--<shadedPattern>${flink.bundle.shade.prefix}org.apache.commons.codec.</shadedPattern>-->
+                <!--</relocation>-->
+                <!--<relocation>-->
+                  <!--<pattern>org.eclipse.jetty.</pattern>-->
+                  <!--<shadedPattern>${flink.bundle.shade.prefix}org.apache.jetty.</shadedPattern>-->
+                <!--</relocation>-->
+              <!--</relocations>-->
+              <!--<filters>-->
+                <!--<filter>-->
+                  <!--<artifact>*:*</artifact>-->
+                  <!--<excludes>-->
+                    <!--<exclude>META-INF/*.SF</exclude>-->
+                    <!--<exclude>META-INF/*.DSA</exclude>-->
+                    <!--<exclude>META-INF/*.RSA</exclude>-->
+                    <!--<exclude>META-INF/services/javax.*</exclude>-->
+                  <!--</excludes>-->
+                <!--</filter>-->
+              <!--</filters>-->
+            <!--</configuration>-->
+          <!--</execution>-->
+        <!--</executions>-->
+      <!--</plugin>-->
+
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-shade-plugin</artifactId>
-        <version>${maven-shade-plugin.version}</version>
+        <artifactId>maven-assembly-plugin</artifactId>
         <executions>
           <execution>
+            <id>dist</id>
             <phase>package</phase>
             <goals>
-              <goal>shade</goal>
+              <goal>single</goal>
             </goals>
             <configuration>
-              <createSourcesJar>${shadeSources}</createSourcesJar>
-              <dependencyReducedPomLocation>${project.build.directory}/dependency-reduced-pom.xml
-              </dependencyReducedPomLocation>
-              <transformers>
-                <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer">
-                </transformer>
-                <transformer implementation="org.apache.maven.plugins.shade.resource.ApacheNoticeResourceTransformer">
-                  <addHeader>true</addHeader>
-                </transformer>
-                <transformer implementation="org.apache.maven.plugins.shade.resource.IncludeResourceTransformer">
-                  <resource>META-INF/LICENSE</resource>
-                  <file>target/classes/META-INF/LICENSE</file>
-                </transformer>
-              </transformers>
-              <artifactSet>
-                <includes>
-                  <include>org.apache.hudi:hudi-common</include>
-                  <include>org.apache.hudi:hudi-client-common</include>
-                  <include>org.apache.hudi:hudi-flink-client</include>
-                  <include>org.apache.hudi:hudi-flink_${scala.binary.version}</include>
-                  <include>org.apache.hudi:hudi-hive-sync</include>
-                  <include>org.apache.hudi:hudi-sync-common</include>
-                  <include>org.apache.hudi:hudi-hadoop-mr</include>
-                  <include>org.apache.hudi:hudi-timeline-service</include>
-
-                  <include>com.yammer.metrics:metrics-core</include>
-                  <include>com.beust:jcommander</include>
-                  <include>io.javalin:javalin</include>
-                  <include>org.jetbrains.kotlin:*</include>
-                  <include>org.rocksdb:rocksdbjni</include>
-                  <include>org.apache.httpcomponents:httpclient</include>
-                  <include>org.apache.httpcomponents:httpcore</include>
-                  <include>org.apache.httpcomponents:fluent-hc</include>
-                  <include>org.antlr:stringtemplate</include>
-                  <!-- Parquet -->
-                  <include>org.apache.parquet:parquet-avro</include>
-                  <include>org.apache.parquet:parquet-hadoop</include>
-                  <include>org.apache.parquet:parquet-column</include>
-                  <include>org.apache.parquet:parquet-common</include>
-                  <include>org.apache.parquet:parquet-format-structures</include>
-                  <include>org.apache.parquet:parquet-encoding</include>
-                  <include>org.apache.parquet:parquet-jackson</include>
-
-                  <include>org.apache.avro:avro</include>
-                  <include>joda-time:joda-time</include>
-                  <include>com.fasterxml.jackson.core:jackson-annotations</include>
-                  <include>com.fasterxml.jackson.core:jackson-databind</include>
-                  <include>com.fasterxml.jackson.core:jackson-core</include>
-
-                  <include>com.twitter:bijection-avro_${scala.binary.version}</include>
-                  <include>com.twitter:bijection-core_${scala.binary.version}</include>
-                  <include>io.dropwizard.metrics:metrics-core</include>
-                  <include>io.dropwizard.metrics:metrics-graphite</include>
-                  <include>io.prometheus:simpleclient</include>
-                  <include>io.prometheus:simpleclient_httpserver</include>
-                  <include>io.prometheus:simpleclient_dropwizard</include>
-                  <include>io.prometheus:simpleclient_pushgateway</include>
-                  <include>io.prometheus:simpleclient_common</include>
-                  <include>com.yammer.metrics:metrics-core</include>
-
-                  <!-- Used for HUDI TimelineService -->
-                  <include>org.eclipse.jetty:*</include>
-                  <include>org.eclipse.jetty.websocket:*</include>
-                  <include>javax.servlet:javax.servlet-api</include>
-
-                  <!-- Used for HUDI write handle -->
-                  <inclide>com.esotericsoftware:kryo-shaded</inclide>
-
-                  <include>org.apache.flink:flink-hadoop-compatibility_${scala.binary.version}</include>
-                  <include>org.apache.flink:flink-avro</include>
-                  <include>org.apache.flink:flink-json</include>
-                  <include>org.apache.flink:flink-parquet_${scala.binary.version}</include>
-
-                  <include>org.apache.hive:hive-common</include>
-                  <include>org.apache.hive:hive-service</include>
-                  <include>org.apache.hive:hive-service-rpc</include>
-                  <include>org.apache.hive:hive-exec</include>
-                  <include>org.apache.hive:hive-metastore</include>
-                  <include>org.apache.hive:hive-jdbc</include>
-                  <include>org.datanucleus:datanucleus-core</include>
-                  <include>org.datanucleus:datanucleus-api-jdo</include>
-                  <include>org.apache.thrift:libfb303</include>
-                  <include>org.apache.orc:orc-core</include>
-                  <include>org.apache.flink:flink-sql-connector-hive-2.3.6_${scala.binary.version}</include>
-
-                  <include>org.apache.hbase:hbase-common</include>
-                  <include>commons-codec:commons-codec</include>
-                </includes>
-              </artifactSet>
-              <relocations>
-                <relocation>
-                  <pattern>org.apache.avro.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.avro.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.parquet.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.parquet.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>com.yammer.metrics.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}com.yammer.metrics.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>com.beust.jcommander.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}com.beust.jcommander.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.hive.jdbc.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hive.jdbc.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.hadoop.hive.metastore.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.metastore.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.hadoop.hive.metastore.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.ql.metadata.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.hive.common.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hive.common.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.hadoop.hive.common.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.common.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.hadoop.hive.conf.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.conf.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.hive.service.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hive.service.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.hadoop.hive.service.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.hadoop.hive.service.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>com.codahale.metrics.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}com.codahale.metrics.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.apache.commons.codec.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.commons.codec.</shadedPattern>
-                </relocation>
-                <relocation>
-                  <pattern>org.eclipse.jetty.</pattern>
-                  <shadedPattern>${flink.bundle.shade.prefix}org.apache.jetty.</shadedPattern>
-                </relocation>
-              </relocations>
-              <filters>
-                <filter>
-                  <artifact>*:*</artifact>
-                  <excludes>
-                    <exclude>META-INF/*.SF</exclude>
-                    <exclude>META-INF/*.DSA</exclude>
-                    <exclude>META-INF/*.RSA</exclude>
-                    <exclude>META-INF/services/javax.*</exclude>
-                  </excludes>
-                </filter>
-              </filters>
+              <appendAssemblyId>false</appendAssemblyId>
+              <attach>false</attach>
+              <finalName>${project.artifactId}-${project.version}</finalName>
+              <descriptors>
+                <descriptor>src/main/assemblies/stage-lib.xml</descriptor>
+              </descriptors>
             </configuration>
           </execution>
         </executions>
       </plugin>
+
+
     </plugins>
 
     <resources>
