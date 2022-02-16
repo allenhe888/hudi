@@ -470,7 +470,8 @@
               <goal>exec</goal>
             </goals>
             <configuration>
-              <executable>/bin/bash</executable>
+              <!--<executable>/bin/bash</executable>-->
+              <executable>bash</executable>
               <arguments>
                 <argument>-c</argument>
                 <argument>echo HUDI_WS=`dirname ${project.basedir}`</argument>
