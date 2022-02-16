@@ -109,7 +109,7 @@ class Spark2Adapter extends SparkAdapter {
     def closePartition(): Unit = {
       if (currentFiles.nonEmpty) {
         // Copy to a new Array.
-        val newPartition = FilePartition(partitions.size, currentFiles.toArray)
+        val newPartition = FilePartition(partitions.size, currentFiles.toArray.toSeq)
         partitions += newPartition
       }
       currentFiles.clear()

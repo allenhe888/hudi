@@ -106,7 +106,7 @@
     <log4j.test.version>2.17.0</log4j.test.version>
     <slf4j.version>1.7.30</slf4j.version>
     <joda.version>2.9.9</joda.version>
-    <hadoop.version>2.7.3</hadoop.version>
+    <hadoop.version>2.7.2</hadoop.version>
     <hive.groupid>org.apache.hive</hive.groupid>
     <hive.version>2.3.1</hive.version>
     <hive.exec.classifier>core</hive.exec.classifier>
@@ -118,7 +118,7 @@
     <spark.version>${spark2.version}</spark.version>
     <sparkbundle.version></sparkbundle.version>
     <flink.version>1.14.3</flink.version>
-    <spark2.version>2.4.4</spark2.version>
+    <spark2.version>2.4.3</spark2.version>
     <spark3.version>3.2.0</spark3.version>
     <hudi.spark.module>hudi-spark2</hudi.spark.module>
     <hudi.spark.common.module>hudi-spark2-common</hudi.spark.common.module>
@@ -138,7 +138,7 @@
     <codehaus-jackson.version>1.9.13</codehaus-jackson.version>
     <h2.version>1.4.199</h2.version>
     <awaitility.version>3.1.2</awaitility.version>
-    <skipTests>false</skipTests>
+    <skipTests>true</skipTests>
     <skipUTs>${skipTests}</skipUTs>
     <skipFTs>${skipTests}</skipFTs>
     <skipITs>${skipTests}</skipITs>
